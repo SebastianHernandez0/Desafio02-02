@@ -1,0 +1,182 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h4,
+p,
+h3 {
+    font-family: Roboto;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header header header header header header header header"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+        "aside contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+    ;
+    height: 100vh;
+
+}
+
+.header {
+    grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: oklch(33.7% 0.208 275.1);
+    padding: 1em;
+
+}
+
+.header h4 {
+
+    text-shadow: 3px 5px 2px black;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.aside h1,
+ul {
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.aside p{
+    font-size: 1rem;
+}
+.aside ul li a:hover{
+    color: white;
+}
+
+ul li {
+    padding: 0.2rem;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: oklch(28% 0 360 / 80%);
+}
+
+span {
+
+    color: oklch(28% 0 360 / 40%);
+
+}
+
+.contenido {
+    grid-area: contenido;
+
+    display: grid;
+    grid-template-areas:
+        "a b c"
+        "d x x ";
+
+    margin: 20px;
+    gap: 20px;
+
+
+}
+
+.item {
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.item p{
+    padding: 0.8rem;
+    color: oklch(28% 0 360 / 60%)
+}
+.item img {
+    width: 100%;
+    height: 50vh;
+
+}
+
+.item h3{
+    font-size: 1.2rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.4rem;
+    background-color: oklch(33.7% 0.208 275.1);
+    color: white;
+}
+
+
+.item1 {
+
+    grid-area: a;
+
+
+}
+
+.item2 {
+
+    grid-area: b;
+
+
+}
+
+.item3 {
+
+    grid-area: c;
+
+
+
+}
+
+.item4 {
+
+    grid-area: d;
+
+}
+
+
+@media (max-width: 900px) {
+    .contenido {
+        grid-area: contenido;
+    
+        display: grid;
+        grid-template-areas:
+            "a "
+            "b "
+            "c "
+            "d";
+    
+        margin: 20px;
+        gap: 20px;
+    
+    }
+    .item h3{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+  }
